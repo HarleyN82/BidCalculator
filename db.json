@@ -1,0 +1,415 @@
+{
+  "projects": [
+    {
+      "name": "Servidores (coletor de logs)",
+      "budget": 2.5,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "dolar": 5.1,
+      "converted_price": "2.50",
+      "price": "2.50",
+      "category": {
+        "id": "1",
+        "name": "GibaByte"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "3",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 1
+    },
+    {
+      "name": "Giga de logs analisados",
+      "budget": 2.55,
+      "currency": {
+        "id": "2",
+        "name": "USD"
+      },
+      "dolar": 5.1,
+      "converted_price": 2.55,
+      "price": "0.50",
+      "category": {
+        "id": "2",
+        "name": "Host"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "3",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 2
+    },
+    {
+      "name": "Servidores (EDR)",
+      "budget": 25,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "25",
+      "dolar": 5.18,
+      "converted_price": "25",
+      "category": {
+        "id": "2",
+        "name": "Host"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 3
+    },
+    {
+      "name": "Armazenamento de logs",
+      "budget": 2.59,
+      "currency": {
+        "id": "2",
+        "name": "USD"
+      },
+      "price": "0.50",
+      "dolar": 5.18,
+      "converted_price": "2.59",
+      "category": {
+        "id": "1",
+        "name": "GibaByte"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 4
+    },
+    {
+      "name": "Gateways de Firewall",
+      "budget": 75,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "75",
+      "dolar": 5.18,
+      "converted_price": "75",
+      "category": {
+        "id": "3",
+        "name": "Appliance"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 5
+    },
+    {
+      "name": "Assets para Gestão de Vulnerabilidades",
+      "budget": 50,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "50",
+      "dolar": 5.18,
+      "converted_price": "50",
+      "category": {
+        "id": "2",
+        "name": "Host"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 6
+    },
+    {
+      "name": "Console de antimalware",
+      "budget": 2,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "2",
+      "dolar": 5.1,
+      "converted_price": "2",
+      "category": {
+        "id": "2",
+        "name": "Host"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 7
+    },
+    {
+      "name": "Active Directory (on premise)",
+      "budget": 250,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "250",
+      "dolar": 5.1,
+      "converted_price": "250",
+      "category": {
+        "id": "2",
+        "name": "Host"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 8
+    },
+    {
+      "name": "Console de e-mail (antispam)",
+      "budget": 7.5,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "7.50",
+      "dolar": 5.1,
+      "converted_price": "7.50",
+      "category": {
+        "id": "4",
+        "name": "Caixas Postais"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 9
+    },
+    {
+      "name": "Appliances de NDR",
+      "budget": 800,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "800",
+      "dolar": 5.1,
+      "converted_price": "800",
+      "category": {
+        "id": "3",
+        "name": "Appliance"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 10
+    },
+    {
+      "name": "Appliances de IDPS",
+      "budget": 650,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "650",
+      "dolar": 5.1,
+      "converted_price": "650",
+      "category": {
+        "id": "3",
+        "name": "Appliance"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 11
+    },
+    {
+      "name": "Instância Kibana",
+      "budget": 1000,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "1000",
+      "dolar": 5.1,
+      "converted_price": "1000",
+      "category": {
+        "id": "5",
+        "name": "Instâncias"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 12
+    },
+    {
+      "name": "Orquestrador",
+      "budget": 500,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "500",
+      "dolar": 5.1,
+      "converted_price": "500",
+      "category": {
+        "id": "3",
+        "name": "Appliance"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 13
+    },
+    {
+      "name": "Regras de Orquestração",
+      "budget": 250,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "250",
+      "dolar": 5.1,
+      "converted_price": "250",
+      "category": {
+        "id": "6",
+        "name": "Regras"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "3",
+        "name": "Casos de Uso"
+      },
+      "quantityTime": "1",
+      "id": 14
+    },
+    {
+      "name": "Módulo de Threat Intelligence Data Leak (e-mail, domínio, nickname)​",
+      "budget": 800,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "800",
+      "dolar": 5.1,
+      "converted_price": "800",
+      "category": {
+        "id": "7",
+        "name": "Domínios"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "1",
+        "name": "Mês"
+      },
+      "quantityTime": "1",
+      "id": 15
+    },
+    {
+      "name": "Hora equipe de monitoramento (provisionamento)",
+      "budget": 1,
+      "currency": {
+        "id": "1",
+        "name": "BRL"
+      },
+      "price": "1",
+      "dolar": 5.1,
+      "converted_price": "1",
+      "category": {
+        "id": "8",
+        "name": "Horas"
+      },
+      "quantityCategory": "1",
+      "time": {
+        "id": "2",
+        "name": "Pessoa"
+      },
+      "quantityTime": "1",
+      "id": 16
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "GibaByte"
+    },
+    {
+      "id": 2,
+      "name": "Host"
+    },
+    {
+      "id": 3,
+      "name": "Appliance"
+    },
+    {
+      "id": 4,
+      "name": "Caixas Postais"
+    },
+    {
+      "id": 5,
+      "name": "Instâncias"
+    },
+    {
+      "id": 6,
+      "name": "Regras"
+    },
+    {
+      "id": 7,
+      "name": "Domínios"
+    },
+    {
+      "id": 8,
+      "name": "Horas"
+    }
+  ],
+  "currencies": [
+    {
+      "id": 1,
+      "name": "BRL"
+    },
+    {
+      "id": 2,
+      "name": "USD",
+      "value": 5.18
+    }
+  ],
+  "time": [
+    {
+      "id": 1,
+      "name": "Mês"
+    },
+    {
+      "id": 2,
+      "name": "Pessoa"
+    },
+    {
+      "id": 3,
+      "name": "Casos de Uso"
+    }
+  ]
+}

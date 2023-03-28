@@ -1,0 +1,23 @@
+.container{
+    width: 100%; /*1200px*/
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/*Classes Help*/
+
+.min-height{
+    min-height: 75%;
+}
+
+.start{
+    justify-content: flex-start; /*Colocará todos pro inicio*/
+}
+
+/*O flex vem em row (linha)*/
+.column{
+    flex-direction: column;
+    justify-content: flex-start;
+}

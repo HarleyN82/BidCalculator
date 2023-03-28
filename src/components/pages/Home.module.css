@@ -1,0 +1,53 @@
+.home_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizar na vertical */
+    justify-content: center; /* Centralizar na horizontal */
+    padding: 4em;
+    background-size: cover;
+    background-position: left;
+    background-image: url('../../img/PlanoDeFundoCadeado.png');
+}
+
+.btn_home{
+    padding: 2em;
+}
+
+.home_container h1{
+   font-size: 2.5em;
+   color: #222; /* Dark: #fff  - Ligth: #222*/
+   margin-bottom: .5em;
+}
+
+.home_container h1 span{
+    color: #fff;
+    padding: 0.2em;
+    background-color: #00bdd6; /* Dark: #222 - Ligth: #00bdd6*/
+}
+
+.home_container p{
+    margin-bottom: 1.5em;
+    color:#7b7b7b; /* Dark: #fff - Ligth: #7b7b7b */
+}
+
+.home_container img{
+    width: 350px;
+    margin: 2em 0;
+}
+
+.border_home{
+    border: 1px solid #fff;
+    padding: 1em;
+}
+
+.text_container{
+    background-color: #fff; /* Dark: #05adc6 - Ligth: #fff*/
+    width: 45em;
+    height: 20em;
+    padding: 5em;
+    /*opacity: 0.9;*/
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}

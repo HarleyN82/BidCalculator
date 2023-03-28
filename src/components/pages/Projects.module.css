@@ -1,0 +1,14 @@
+.project_container{
+    margin: 0 120px;
+    padding: 2em; /* espaçamento interno dos elementos */
+}
+
+.title_container{
+    display: flex; /* cada elemento um do lado do outro */
+    justify-content: space-between; /* espaçamento lateral igual entre os elementos*/
+    margin-bottom: 2em;
+}
+
+.dollar{
+    margin-top: 2em;
+}

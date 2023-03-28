@@ -1,0 +1,55 @@
+.newproject_container{
+    width: 100%;
+    background-size: cover;
+    background-position: left;
+    background-image: url('../../img/PlanoDeFundoCadeado.png');
+}
+
+.form_container{
+    background-color: #fff;
+    width: 80%;
+    margin: 4em auto;
+    padding: 3em;
+    box-shadow: 5px 5px 5px #00bdd6;
+}
+
+.form_title{
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid #7b7b7b;
+}
+
+.form_title h1{
+    margin-bottom: 0.5em;
+}
+
+.form_title h1::after {
+    justify-content: center;
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    padding: 0 1em;
+    background-color: #00bdd6;
+    margin: 0 12.8em; /*0 12.8em auto*/
+    position: relative;
+    border-radius: 10px;
+}
+
+.form_title h1 span{
+    color: #222;
+    padding: 0.2em;
+    /*background-color: #00bdd6; /* Dark: #222 - Ligth: #00bdd6*/
+}
+
+.form_body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.newproject_container p{
+    color: #7b7b7b;
+    padding-bottom: 1em;
+}
