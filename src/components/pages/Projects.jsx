@@ -33,7 +33,7 @@ export function Projects(){
     // Puxa todos os dados atualizados
     useEffect(() => {
         setTimeout(() => {
-            fetch("http://localhost:5000/projects",{
+            fetch("http://localhost:5500/projects",{
                 method: 'GET',
                 headers:{
                     'Content-Type':"application/json"
@@ -62,7 +62,7 @@ export function Projects(){
 
     // Atualiza a moeda a partir do valor do input
     useEffect(() => {
-        fetch("http://localhost:5000/currencies/2")
+        fetch("http://localhost:5500/currencies/2")
         .then(res => res.json())
         .then(data => {
             setDollar(data.value);
@@ -71,31 +71,10 @@ export function Projects(){
         .catch(e => console.log(e));
     }, [dollar]);
 
-    // Percorre cada projeto com USD como moeda e muda o preço e o orçamento
-   /*const updateProjects = () => {
-
-        if (projects.length > 0) {
-            projects.forEach(project => {
-              fetch(`http://localhost:5000/projects/${project.id}`, {
-                method: 'PATCH',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    converted_price: project.converted_price,
-                    dolar: dollar,
-                    budget: project.converted_price * project.quantityCategory * project.quantityTime
-                })
-              })
-                .then(res => res.json())
-                .then(data => console.log(data))
-                .catch(err => console.log(err));
-            });
-          }
-    }*/
-   
    useEffect(() => {
     if (projects.length > 0) {
         projects.forEach(project => {
-          fetch(`http://localhost:5000/projects/${project.id}`, {
+          fetch(`http://localhost:5500/projects/${project.id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -116,7 +95,7 @@ export function Projects(){
         const newValue = parseFloat(e.target.value);
         setDollar(newValue);
 
-        fetch("http://localhost:5000/currencies/2", {
+        fetch("http://localhost:5500/currencies/2", {
             method: "PATCH",
             headers: {
             "Content-Type": "application/json"
@@ -137,13 +116,11 @@ export function Projects(){
             );
         })
         .catch(e => console.log(e));
-
-       // updateProjects()
     };
 
      // Método para remover o projeto  + fecth
      const removeProject = (id) => {
-        fetch(`http://localhost:5000/projects/${id}`,{
+        fetch(`http://localhost:5500/projects/${id}`,{
             method: 'DELETE',
             headers: {
                 'Content-Type':'application/json'

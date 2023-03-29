@@ -1,47 +1,47 @@
 {
   "projects": [
     {
-      "name": "Servidores (coletor de logs)",
-      "budget": 2.5,
+      "name": "Giga de logs analisados",
+      "budget": 2.59,
       "currency": {
-        "id": "1",
-        "name": "BRL"
+        "id": "2",
+        "name": "USD"
       },
-      "dolar": 5.1,
-      "converted_price": "2.50",
-      "price": "2.50",
+      "price": "0.50",
+      "dolar": 5.18,
+      "converted_price": "2.59",
       "category": {
         "id": "1",
         "name": "GibaByte"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
-        "id": "3",
+        "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 1
     },
     {
-      "name": "Giga de logs analisados",
-      "budget": 2.55,
+      "name": "Servidores (coletor de logs)",
+      "budget": 4.5,
       "currency": {
-        "id": "2",
-        "name": "USD"
+        "id": "1",
+        "name": "BRL"
       },
-      "dolar": 5.1,
-      "converted_price": 2.55,
-      "price": "0.50",
+      "price": "4.50",
+      "dolar": 5.18,
+      "converted_price": "4.50",
       "category": {
         "id": "2",
         "name": "Host"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
-        "id": "3",
+        "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 2
     },
     {
@@ -51,19 +51,19 @@
         "id": "1",
         "name": "BRL"
       },
-      "price": "25",
+      "price": "25.00",
       "dolar": 5.18,
-      "converted_price": "25",
+      "converted_price": "25.00",
       "category": {
         "id": "2",
         "name": "Host"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 3
     },
     {
@@ -81,11 +81,11 @@
         "name": "GibaByte"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 4
     },
     {
@@ -103,11 +103,11 @@
         "name": "Appliance"
       },
       "quantityCategory": "1",
-      "time": {
-        "id": "1",
-        "name": "Mês"
-      },
       "quantityTime": "1",
+      "time": {
+        "id": "2",
+        "name": "Pessoa"
+      },
       "id": 5
     },
     {
@@ -125,11 +125,11 @@
         "name": "Host"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 6
     },
     {
@@ -140,18 +140,18 @@
         "name": "BRL"
       },
       "price": "2",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "2",
       "category": {
         "id": "2",
         "name": "Host"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 7
     },
     {
@@ -162,18 +162,18 @@
         "name": "BRL"
       },
       "price": "250",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "250",
       "category": {
         "id": "2",
         "name": "Host"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 8
     },
     {
@@ -184,18 +184,18 @@
         "name": "BRL"
       },
       "price": "7.50",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "7.50",
       "category": {
         "id": "4",
         "name": "Caixas Postais"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 9
     },
     {
@@ -206,18 +206,18 @@
         "name": "BRL"
       },
       "price": "800",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "800",
       "category": {
         "id": "3",
         "name": "Appliance"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 10
     },
     {
@@ -228,18 +228,18 @@
         "name": "BRL"
       },
       "price": "650",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "650",
       "category": {
         "id": "3",
         "name": "Appliance"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 11
     },
     {
@@ -250,40 +250,40 @@
         "name": "BRL"
       },
       "price": "1000",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "1000",
       "category": {
         "id": "5",
         "name": "Instâncias"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 12
     },
     {
       "name": "Orquestrador",
-      "budget": 500,
+      "budget": 50,
       "currency": {
         "id": "1",
         "name": "BRL"
       },
-      "price": "500",
-      "dolar": 5.1,
-      "converted_price": "500",
+      "price": "50",
+      "dolar": 5.18,
+      "converted_price": "50",
       "category": {
         "id": "3",
         "name": "Appliance"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 13
     },
     {
@@ -294,18 +294,18 @@
         "name": "BRL"
       },
       "price": "250",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "250",
       "category": {
         "id": "6",
         "name": "Regras"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "3",
         "name": "Casos de Uso"
       },
-      "quantityTime": "1",
       "id": 14
     },
     {
@@ -316,18 +316,18 @@
         "name": "BRL"
       },
       "price": "800",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "800",
       "category": {
         "id": "7",
         "name": "Domínios"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "1",
         "name": "Mês"
       },
-      "quantityTime": "1",
       "id": 15
     },
     {
@@ -338,53 +338,53 @@
         "name": "BRL"
       },
       "price": "1",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "1",
       "category": {
         "id": "8",
         "name": "Horas"
       },
       "quantityCategory": "1",
+      "quantityTime": "1",
       "time": {
         "id": "2",
         "name": "Pessoa"
       },
-      "quantityTime": "1",
       "id": 16
     }
   ],
   "categories": [
     {
       "id": 1,
-      "name": "GibaByte"
-    },
-    {
-      "id": 2,
-      "name": "Host"
-    },
-    {
-      "id": 3,
       "name": "Appliance"
     },
     {
-      "id": 4,
+      "id": 2,
       "name": "Caixas Postais"
     },
     {
-      "id": 5,
-      "name": "Instâncias"
-    },
-    {
-      "id": 6,
-      "name": "Regras"
-    },
-    {
-      "id": 7,
+      "id": 3,
       "name": "Domínios"
     },
     {
-      "id": 8,
+      "id": 4,
+      "name": "GibaByte"
+    },
+    {
+      "id": 5,
       "name": "Horas"
+    },
+    {
+      "id": 6,
+      "name": "Host"
+    },
+    {
+      "id": 7,
+      "name": "Instância"
+    },
+    {
+      "id": 8,
+      "name": "Regras"
     }
   ],
   "currencies": [
@@ -401,15 +401,15 @@
   "time": [
     {
       "id": 1,
-      "name": "Mês"
+      "name": "Casos de Uso"
     },
     {
       "id": 2,
-      "name": "Pessoa"
+      "name": "Mês"
     },
     {
       "id": 3,
-      "name": "Casos de Uso"
+      "name": "Pessoa"
     }
   ]
 }

@@ -53,7 +53,7 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
 
   // Requisição de API para buscar as categorias
   useEffect(() => {
-      fetch("http://localhost:5000/categories",{
+      fetch("http://localhost:5500/categories",{
       method: 'GET',
       headers:{
           'Content-Type':"application/json"
@@ -68,7 +68,7 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
 
   // Requisição de API para buscar as moedas
   useEffect(() => {
-    fetch('http://localhost:5000/currencies', {
+    fetch('http://localhost:5500/currencies', {
         method: 'GET',
         headers: {
         'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
 
   // Requisição de API para buscar o período
   useEffect(() => {
-    fetch('http://localhost:5000/time', {
+    fetch('http://localhost:5500/time', {
         method: 'GET',
         headers: {
         'Content-Type': 'application/json',

@@ -8,7 +8,7 @@ export function NewProject(){
 
     function createPost(project){
         
-        fetch('http://localhost:5000/projects',{
+        fetch('http://localhost:5500/projects',{
             method: 'POST',
             headers:{
                 'Content-Type':"application/json"

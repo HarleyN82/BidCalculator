@@ -32,7 +32,7 @@ export function Project(){
     // Chamar o projeto do id
     useEffect(()=> {
         setTimeout(() => {
-            fetch(`http://localhost:5000/projects/${id}`,{
+            fetch(`http://localhost:5500/projects/${id}`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -57,7 +57,7 @@ export function Project(){
         // Só assim ele envia esses dados para rota
         console.log(project)
 
-        fetch(`http://localhost:5000/projects/${project.id}`,{
+        fetch(`http://localhost:5500/projects/${project.id}`,{
             method: 'PATCH', // Alterar só o que foi mudado
             headers:{
                 'Content-Type':"application/json"
