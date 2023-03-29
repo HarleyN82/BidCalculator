@@ -12,6 +12,8 @@ import {DollarStore} from "../zustand/DollarStore";
 export function ProjectForm({btnText, handleSubmit, projectData}){
 
   const dollar = DollarStore((state) => state.dollar)
+
+  const [priceValue,setPriceValue] = useState()
     
   // Select das Categorias (banco de dados)
   const [categories, setCategories] = useState([])
@@ -43,7 +45,7 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
       id: '',
       name: '',
     },
-    price: '0,00',
+    price: '',
     dolar: null, // dollar,
     converted_price: null,
   });
@@ -154,7 +156,15 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
 
       const newConvertedBudget = convertCurrency(project.price);
       setConvertedPrice(newConvertedBudget);
+      setPriceValue(value)
     }
+
+    useEffect(() => {
+      if (priceValue && currency) {
+        const newConvertedBudget = convertCurrency(project.price);
+        setConvertedPrice(newConvertedBudget);
+      }
+    }, [priceValue, currency, project.price]);
 
     // Método para converter com base na escolha da moeda
     const convertCurrency = (value, currency) => {
