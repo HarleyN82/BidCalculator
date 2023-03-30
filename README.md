@@ -33,6 +33,7 @@ Este projeto foi feito como um desafio individual para a estagiária DevFront Sa
 - Hooks: useState; useEffect; useLocation, useNavigate;
 - Assincronismo com o setTimeout
 - Props dinâmicas
+- Componentização no React
 - Estilizações opicionais
 - Renderização Condicional
 
