@@ -14,10 +14,23 @@ Este projeto foi feito como um desafio individual para a estagiária DevFront Sa
 
 ## Tecnologias
 
-- React JS
 - Biblioteca Axios
 - Json Server
 - Node JS
+- React JS
+- Zustand
 
 ## Escopo Informacional
+> Nesse campo estarão alocados todos os conteúdos que foram aplicados nesse projeto.
+
+- React Router
+- React Icons
+- React Animation Routes
+- Requisições API com Axios
+- Criação de banco de dados com Json Server
+- Criação de Variáveis Globais com Zustand
+- Hooks: useState; useEffect; useLocation, useNavigate;
+- Assincronismo com o setTimeout
+- Props dinâmicas 
+
 ## Bugs 
