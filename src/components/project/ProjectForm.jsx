@@ -13,6 +13,9 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
 
   const dollar = DollarStore((state) => state.dollar)
 
+  // Estado da moeda
+  const [currency, setCurrency] = useState("BRL");
+
   const [priceValue,setPriceValue] = useState()
     
   // Select das Categorias (banco de dados)
@@ -20,12 +23,9 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
 
   // Select das Moedas (banco de dados)
   const [currencies, setCurrencies] = useState([])
-  
-  // Estado da moeda
-  const [currency, setCurrency] = useState("BRL");
 
   // Estado do preço convertido
-  const [convertedPrice, setConvertedPrice] = useState(projectData ? projectData.converted_price : null);
+  const [convertedPrice, setConvertedPrice] = useState(null);
 
   // Select do Tempo (banco de dados)
   const [times, setTimes] = useState([])
@@ -153,21 +153,10 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
     const handleChange = (e) => {
       const { name, value } = e.target;
       setProject({ ...project, [name]: value });
-
-      const newConvertedBudget = convertCurrency(project.price);
-      setConvertedPrice(newConvertedBudget);
-      setPriceValue(value)
-    }
-
-    useEffect(() => {
-      if (priceValue && currency) {
-        const newConvertedBudget = convertCurrency(project.price);
-        setConvertedPrice(newConvertedBudget);
-      }
-    }, [priceValue, currency, project.price]);
+    };
 
     // Método para converter com base na escolha da moeda
-    const convertCurrency = (value, currency) => {
+   const convertCurrency = (value, currency) => {
       const conversionRate = currency === '1' ? 1.0 : dollar;
       return (parseFloat(value) * conversionRate).toFixed(2);
     };
@@ -176,7 +165,7 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
     const handleCurrency = (e) => {
       const newCurrency = e.target.value;
       setCurrency(newCurrency);
-
+    
       setProject({
         ...project,
         currency: {
@@ -184,7 +173,7 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
           name: e.target.options[e.target.selectedIndex].text,
         },
       });
-  
+
       const newConvertedPrice = convertCurrency(project.price, newCurrency);
       setConvertedPrice(newConvertedPrice);
     };
@@ -192,11 +181,22 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
     // Altere o método handleCurrency para atualizar apenas o estado da moeda selecionada
     const handlePriceChange = (e) => {
       const priceValue = e.target.value
+     
       setProject({
         ...project,
         price: priceValue
       });
+
+      const newConvertedPrice = convertCurrency(project.price, currency);
+      setConvertedPrice(newConvertedPrice);
+      setPriceValue(priceValue);
     };
+
+    useEffect(() => {
+      // Converte o valor com base na moeda selecionada
+      const converted = convertCurrency(priceValue, currency);
+      setConvertedPrice(converted);
+    }, [currency, priceValue, dollar]);
 
   return (
 
@@ -224,7 +224,7 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
               text='Preço do Item' 
               name='price'
               placeholder='Insira o preço do item'
-              value={project.price ? project.price : ''}
+              value={priceValue}  /* project.price ? project.price : '' */
               handleOnChange={handlePriceChange}
             />
             <Input
