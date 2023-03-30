@@ -26,11 +26,14 @@ Este projeto foi feito como um desafio individual para a estagiária DevFront Sa
 - React Router
 - React Icons
 - React Animation Routes
+- React modules.css
 - Requisições API com Axios
 - Criação de banco de dados com Json Server
 - Criação de Variáveis Globais com Zustand
 - Hooks: useState; useEffect; useLocation, useNavigate;
 - Assincronismo com o setTimeout
-- Props dinâmicas 
+- Props dinâmicas
+- Estilizações opicionais
+- Renderização Condicional
 
 ## Bugs 
