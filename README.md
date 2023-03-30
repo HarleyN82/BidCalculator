@@ -15,7 +15,7 @@ Este projeto foi feito como um desafio individual para a estagiária DevFront Sa
 ## Tecnologias
 
 - React JS
-- Biblitoeca Axios
+- Biblioteca Axios
 - Json Server
 - Node JS
 
