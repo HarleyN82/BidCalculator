@@ -1,4 +1,5 @@
 import styles from './Project.module.css'
+import axios from "axios"
 
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
@@ -32,15 +33,9 @@ export function Project(){
     // Chamar o projeto do id
     useEffect(()=> {
         setTimeout(() => {
-            fetch(`http://localhost:5500/projects/${id}`,{
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                setProject(data)
+            axios.get(`http://localhost:5500/projects/${id}`)
+            .then((response) => {
+                setProject(response.data)
             })
             .catch((e) => console.log(e))
         }, 310)
@@ -53,25 +48,21 @@ export function Project(){
     }
 
     const editPost = (project) => {
-        
         // Só assim ele envia esses dados para rota
-        console.log(project)
-
-        fetch(`http://localhost:5500/projects/${project.id}`,{
-            method: 'PATCH', // Alterar só o que foi mudado
-            headers:{
-                'Content-Type':"application/json"
+        console.log(project);
+    
+        axios.patch(`http://localhost:5500/projects/${project.id}`, project, {
+            headers: {
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(project)
         })
-        .then((res) => res.json())
-        .then((data) => {
-            setProject(data);
-            setShowProjectForm(!showProjectForm)
-            setMessage("Projeto atualizado com sucesso!")
-            setTypeMessage("sucess")
+        .then((response) => {
+            setProject(response.data);
+            setShowProjectForm(!showProjectForm);
+            setMessage('Projeto atualizado com sucesso!');
+            setTypeMessage('sucess');
         })
-        .catch((e) => console.log(e))
+        .catch((error) => console.log(error));
     }
 
     const currencySymbol = project.currency === 'BRL' ? 'R$' : '$';

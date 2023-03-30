@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useState, useEffect} from 'react'
 
 import {Input} from '../form/Input'
@@ -55,29 +56,19 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
 
   // Requisição de API para buscar as categorias
   useEffect(() => {
-      fetch("http://localhost:5500/categories",{
-      method: 'GET',
-      headers:{
-          'Content-Type':"application/json"
-      }
-  })
-      .then((res) => res.json())
-      .then((data) => {
-          setCategories(data)
+      axios.get("http://localhost:5500/categories")
+      .then((response) => {
+        const data = response.data
+        setCategories(data)
       })
       .catch((e) => console.log(e))
   },[])
 
   // Requisição de API para buscar as moedas
   useEffect(() => {
-    fetch('http://localhost:5500/currencies', {
-        method: 'GET',
-        headers: {
-        'Content-Type': 'application/json',
-        },
-    })
-      .then((res) => res.json())
-      .then((data) => {
+    axios.get('http://localhost:5500/currencies')
+      .then((response) => {
+        const data = response.data
         setCurrencies(data)
       })
       .catch((e) => console.log(e))
@@ -85,14 +76,9 @@ export function ProjectForm({btnText, handleSubmit, projectData}){
 
   // Requisição de API para buscar o período
   useEffect(() => {
-    fetch('http://localhost:5500/time', {
-        method: 'GET',
-        headers: {
-        'Content-Type': 'application/json',
-        },
-    })
-      .then((res) => res.json())
-      .then((data) => {
+    axios.get('http://localhost:5500/time')
+      .then((response) => {
+        const data = response.data
         setTimes(data)
       })
       .catch((e) => console.log(e))

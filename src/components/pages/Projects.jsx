@@ -1,5 +1,6 @@
-import { useLocation  } from 'react-router-dom'
+import axios from "axios"
 import { useState, useEffect} from 'react';
+import { useLocation  } from 'react-router-dom'
 
 import {Message} from '../layout/Message';
 import {Container} from '../layout/Container';
@@ -24,6 +25,7 @@ export function Projects(){
     const [projectMessage, setProjectMessage] = useState('') // como a message vem pelo redirect, e não temos nada cadastrado aqui vamos criar um state.
 
     const location = useLocation()
+
     let message = ''
     if(location.state){
         message = location.state.message
@@ -33,14 +35,9 @@ export function Projects(){
     // Puxa todos os dados atualizados
     useEffect(() => {
         setTimeout(() => {
-            fetch("http://localhost:5500/projects",{
-                method: 'GET',
-                headers:{
-                    'Content-Type':"application/json"
-                }
-            })
-            .then((res) => res.json())
-            .then((data) => {
+            axios.get("http://localhost:5500/projects")
+            .then((response) => {
+                const data = response.data;
                 console.log(data)
                 setProjects(
                     data.map((project) => {
@@ -62,51 +59,39 @@ export function Projects(){
 
     // Atualiza a moeda a partir do valor do input
     useEffect(() => {
-        fetch("http://localhost:5500/currencies/2")
-        .then(res => res.json())
-        .then(data => {
+        axios.get("http://localhost:5500/currencies/2")
+        .then(response => {
+            const data = response.data;
             setDollar(data.value);
             console.log("Dollar:", dollar)
           })
         .catch(e => console.log(e));
     }, [dollar]);
 
-   useEffect(() => {
-    if (projects.length > 0) {
-        projects.forEach(project => {
-          fetch(`http://localhost:5500/projects/${project.id}`, {
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                converted_price: project.converted_price,
-                dolar: dollar,
-                budget: project.converted_price * project.quantityCategory * project.quantityTime
-            })
-          })
-            .then(res => res.json())
-            .then(data => console.log(data))
-            .catch(err => console.log(err));
-        });
-      }
-    }, [projects,dollar]);
+    useEffect(() => {
+        if (projects.length > 0) {
+            projects.forEach(project => {
+                axios.patch(`http://localhost:5500/projects/${project.id}`, {
+                    converted_price: project.converted_price,
+                    dolar: dollar,
+                    budget: project.converted_price * project.quantityCategory * project.quantityTime
+                })
+                .then(response => console.log(response.data))
+                .catch(error => console.log(error));
+            });
+        }
+    }, [projects, dollar]);
 
     // Pegar o valor do dóllar pelo input e alterar na seção de dolar do banco de dados
     const handleDollarChange = (e) => {
         const newValue = parseFloat(e.target.value);
         setDollar(newValue);
 
-        fetch("http://localhost:5500/currencies/2", {
-            method: "PATCH",
-            headers: {
-            "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                value: parseFloat(newValue)
-            })
+        axios.patch("http://localhost:5500/currencies/2", {
+            value: parseFloat(newValue)
         })
-        .then(res => res.json())  
-        .then(data => {
-            console.log(data);
+        .then(response => {
+            console.log(response.data)
             // atualizar o valor da moeda em todos os projetos
             setProjects(
                 projects.map((project) => ({
@@ -114,19 +99,14 @@ export function Projects(){
                     converted_price: project.currency.name === "USD" ? project.price * newValue : project.converted_price
                 }))
             );
+            setProjectMessage("Dólar atualizado com sucesso!")
         })
         .catch(e => console.log(e));
     };
 
      // Método para remover o projeto  + fecth
      const removeProject = (id) => {
-        fetch(`http://localhost:5500/projects/${id}`,{
-            method: 'DELETE',
-            headers: {
-                'Content-Type':'application/json'
-            },
-        })
-        .then((res) => res.json())
+        axios.delete(`http://localhost:5500/projects/${id}`)
         .then(() => {
             setProjects(projects.filter((project) => project.id !== id))
             setProjectMessage("Projeto removido com sucesso!")

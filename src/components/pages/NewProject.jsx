@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useNavigate  } from 'react-router-dom'
 import { ProjectForm } from '../project/ProjectForm'
 import styles from './NewProject.module.css'
@@ -8,18 +9,15 @@ export function NewProject(){
 
     function createPost(project){
         
-        fetch('http://localhost:5500/projects',{
-            method: 'POST',
+        axios.post('http://localhost:5500/projects', project, {
             headers:{
                 'Content-Type':"application/json"
             },
-            body: JSON.stringify(project)
         })
-        .then((res) => res.json())
-        .then((data) => {
+        .then((response) => {
             // redirect
             navigate('/projects',{state:{ message:'Projeto criado com sucesso!'}})
-            console.log(data)
+            console.log(response.data)
         })
         .catch((e) => console.log(e))
     }
