@@ -21,7 +21,7 @@ Este projeto foi feito como um desafio individual para a estagiária DevFront Sa
 - Zustand
 
 ## Escopo Informacional
-> Nesse campo estarão alocados todos os conteúdos que foram aplicados nesse projeto.
+> Nesse campo estão alocados todos os conteúdos que foram aplicados nesse projeto.
 
 - React Router
 - React Icons
