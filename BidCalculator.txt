@@ -1,0 +1,18 @@
+"BidCalculator" é um sistema fullstack javascript integrado, com o intuito de calcular itens referentes ao produto battossai. Nesse viés, tal sistema busca,
+por meio de uma interface minimalista e intuitiva trazer para o usuário um ambiente agradável para o cadastro dos itens com seus cáclulos.
+
+-- Como usuar o BidCalcualtor -- 
+
+Para usar este sistema basta você clicar no botão "Cadastrar Item".
+
+-- Responsividade BidCalculator --
+
+• Display Pequenos:
+- NavBar
+- Cards
+
+• Display Pequenos e Grandes:
+- About OK
+
+• Display Grandes:
+- Footer

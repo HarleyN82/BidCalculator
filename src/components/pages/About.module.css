@@ -13,7 +13,7 @@
 .border_about{
     border: 1px solid #00bdd6;
     margin: 5em 0;
-    height: 25em;
+    height: 75%;
     width: 50%;
 }
 
@@ -22,6 +22,7 @@
     text-align:justify;
     align-items: center;
     margin: 0.85em;
+    height: 93%;
     padding: 3em;
     background-color: #fff;
 }
