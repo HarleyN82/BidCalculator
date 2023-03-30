@@ -13,9 +13,9 @@ export function Home(){
             <div className={styles.border_home}>
                 <div className={styles.text_container}>
                     <h1>Bem-vindo ao <span>Calculator</span></h1>
-                    <p>Comece a gerenciar os seus produtos agora mesmo!</p>
+                    <p>Comece a gerenciar os seus itens agora mesmo!</p>
                     <div className={styles.btn_home}>
-                        <LinkButton to='/newproject' text='Cadastrar Produto'/>
+                        <LinkButton to='/newitem' text='Cadastrar Item'/>
                     </div>
                 </div>
             </div>

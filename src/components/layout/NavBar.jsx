@@ -9,7 +9,7 @@ export function NavBar(){
             <Link to='/' className={styles.title}>BidCalcu<span>la</span>tor.</Link>
             <ul className={styles.list}>
               <li className={styles.item}><Link to='/'>Home</Link></li>
-              <li className={styles.item}><Link to='/projects'>Produtos</Link></li>
+              <li className={styles.item}><Link to='/itens'>Itens</Link></li>
               <li className={styles.item}><Link to='/about'>Sobre</Link></li>
             </ul>
           </Container>

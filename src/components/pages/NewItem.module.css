@@ -1,8 +1,13 @@
-.newproject_container{
+.newitem_container{
     width: 100%;
     background-size: cover;
     background-position: left;
     background-image: url('../../img/PlanoDeFundoCadeado.png');
+}
+
+.newitem_container p{
+    color: #7b7b7b;
+    padding-bottom: 1em;
 }
 
 .form_container{
@@ -47,9 +52,4 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1em 0;
-}
-
-.newproject_container p{
-    color: #7b7b7b;
-    padding-bottom: 1em;
 }

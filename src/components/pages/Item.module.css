@@ -1,15 +1,15 @@
-.project_details{
+.item_details{
     padding: 2em;
     width: 99%;
 }
 
-.project_details h1,
-.project_details h2,
-.project_details p{
+.item_details h1,
+.item_details h2,
+.item_details p{
     margin-bottom: 1em;
 }
 
-.project_details h1 {
+.item_details h1 {
     background-color: #020710;
     color: #00bdd6;
     padding: .4em;
@@ -18,7 +18,7 @@
     overflow-wrap: break-word;
 }
 
-.project_details span {
+.item_details span {
     font-weight: bold;
 }
 
@@ -49,6 +49,6 @@
     color: #00bdd6
 }
 
-.project_info{
+.item_info{
     width: 100%;
 }

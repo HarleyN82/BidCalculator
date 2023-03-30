@@ -1,4 +1,4 @@
-.project_card{
+.item_card{
     padding: 1em; /* Espaçamento lateral interno*/
     border: 1px solid #043a5d; /* 7a7a7a*/
     /*background-color: #0b182f;*/
@@ -7,7 +7,7 @@
     margin: 0.5%; /*Mantém cada card separado de si*/
 }
 
-.project_card h4{
+.item_card h4{
     color: #fff;
     background-color: #0093a7; /*0b182f - 0093a7*/
     padding: 0.4em;
@@ -17,12 +17,12 @@
     /*border-bottom: 1px solid #7a7a7a;*/
 }
 
-.project_card p{
+.item_card p{
     color: #222; /*020710*/
     margin-bottom: 1em;
 }
 
-.project_card p span{
+.item_card p span{
     font-weight: bold;
 }
 
@@ -90,14 +90,14 @@
     background-color: #fbf7c6;
 }
 
-.project_card_actions{
+.item_card_actions{
     margin-top: 1.2em;
     display: flex;
     align-items: center;
 }
 
-.project_card_actions a,
-.project_card_actions button{
+.item_card_actions a,
+.item_card_actions button{
     text-decoration: none;
     border: none;
     background-color: #020710;
@@ -113,12 +113,12 @@
     transition: 0.5s;
 }
 
-.project_card_actions svg{
+.item_card_actions svg{
     margin-right: 0.5em;
 }
 
-.project_card_actions a:hover,
-.project_card_actions button:hover{
+.item_card_actions a:hover,
+.item_card_actions button:hover{
     color: #00bdd6;
     transform:scale(1.1);
 }
