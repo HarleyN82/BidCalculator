@@ -4,10 +4,20 @@
 
 # Project BidCalculator
 
+> "BidCalculator" é um sistema fullstack javascript integrado, com o intuito de calcular itens referentes ao produto battossai. Nesse viés, tal sistema busca,
+por meio de uma interface minimalista e intuitiva trazer para o usuário um ambiente agradável para o cadastro dos itens com seus cáclulos.
 
-## About
+Este projeto foi feito como um desafio individual para a estagiária DevFront Samara Silvia, permitindo que ela pudesse colocar em prática os conheicmentos adquiridos na trilha e ao longo dos seus próprios estudos (+faculdade) como desenvolvedora fullstack javascript.
+
 ## Requisitos Funcionais
 ## Requisitos Não Funcionais 
+
 ## Tecnologias
+
+- React JS
+- Biblitoeca Axios
+- Json Server
+- Node JS
+
 ## Escopo Informacional
 ## Bugs 
