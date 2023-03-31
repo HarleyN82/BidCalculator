@@ -9,7 +9,7 @@ export function NewItem(){
 
     function createPost(item){
         
-        axios.post('http://localhost:5500/projects', item, {
+        axios.post('http://localhost:5500/itens', item, {
             headers:{
                 'Content-Type':"application/json"
             },

@@ -33,7 +33,7 @@ export function Item(){
     // Chamar o projeto do id
     useEffect(()=> {
         setTimeout(() => {
-            axios.get(`http://localhost:5500/Items/${id}`)
+            axios.get(`http://localhost:5500/itens/${id}`)
             .then((response) => {
                 setItem(response.data)
             })
@@ -47,11 +47,11 @@ export function Item(){
         setShowItemForm(!showItemForm)
     }
 
-    const editPost = (Item) => {
+    const editPost = (item) => {
         // Só assim ele envia esses dados para rota
-        console.log(Item);
+        console.log(item);
     
-        axios.patch(`http://localhost:5500/Items/${Item.id}`, Item, {
+        axios.patch(`http://localhost:5500/itens/${id}`, item, {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -65,7 +65,7 @@ export function Item(){
         .catch((error) => console.log(error));
     }
 
-    const currencySymbol = Item.currency === 'BRL' ? 'R$' : '$';
+    const currencySymbol = item.currency === 'BRL' ? 'R$' : '$';
 
     return(
         <>
@@ -91,7 +91,7 @@ export function Item(){
                             </div>
                         ) : (
                             <div className={styles.item_info}>
-                                <ItemForm handleSubmit={editPost} btnText="Concluir Edição" ItemData={Item}/>
+                                <ItemForm handleSubmit={editPost} btnText="Concluir Edição" ItemData={item}/>
                             </div>
                         )}
                     </div>

@@ -237,10 +237,10 @@ export function ItemForm({btnText, handleSubmit, itemData}){
               placeholder='Tempo da categoria: 2 Hosts...'
               value={item.quantityCategory ? item.quantityCategory : ''}
               handleOnChange={(e) => {
-                setitem({ ...item, quantityCategory: e.target.value });
+                setItem({ ...item, quantityCategory: e.target.value });
               }}
             />
-              <Select 
+            <Select 
               name='time_id' 
               text='Especifique a unidade multiplicadora'
               options={times}
@@ -254,7 +254,7 @@ export function ItemForm({btnText, handleSubmit, itemData}){
               placeholder='Tempo do período: 2 semanas...'
               value={item.quantityTime ? item.quantityTime : ''}
               handleOnChange={(e) => {
-                setitem({ ...item, quantityTime: e.target.value });
+                setItem({ ...item, quantityTime: e.target.value });
               }}
             />
             <Input
