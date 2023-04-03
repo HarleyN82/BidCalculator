@@ -33,7 +33,7 @@ export function Item(){
     // Chamar o projeto do id
     useEffect(()=> {
         setTimeout(() => {
-            axios.get(`http://localhost:5500/itens/${id}`)
+            axios.get(`http://localhost:3001/itens/${id}`)
             .then((response) => {
                 setItem(response.data)
             })
@@ -51,7 +51,7 @@ export function Item(){
         // Só assim ele envia esses dados para rota
         console.log(item);
     
-        axios.patch(`http://localhost:5500/itens/${id}`, item, {
+        axios.patch(`http://localhost:3001/itens/${id}`, item, {
             headers: {
                 'Content-Type': 'application/json',
             },

@@ -35,7 +35,7 @@ export function Itens(){
     // Puxa todos os dados atualizados
     useEffect(() => {
         setTimeout(() => {
-            axios.get("http://localhost:5500/itens")
+            axios.get("http://localhost:3001/itens")
             .then((response) => {
                 const data = response.data;
                 console.log(data)
@@ -59,7 +59,7 @@ export function Itens(){
 
     // Atualiza a moeda a partir do valor do input
     useEffect(() => {
-        axios.get("http://localhost:5500/currencies/2")
+        axios.get("http://localhost:3001/currencies/2")
         .then(response => {
             const data = response.data;
             setDollar(data.value);
@@ -71,7 +71,7 @@ export function Itens(){
     useEffect(() => {
         if (itens.length > 0) {
             itens.forEach(item => {
-                axios.patch(`http://localhost:5500/itens/${item.id}`, {
+                axios.patch(`http://localhost:3001/itens/${item.id}`, {
                     converted_price: item.converted_price,
                     dolar: dollar,
                     budget: item.converted_price * item.quantityCategory * item.quantityTime
@@ -87,7 +87,7 @@ export function Itens(){
         const newValue = parseFloat(e.target.value);
         setDollar(newValue);
 
-        axios.patch("http://localhost:5500/currencies/2", {
+        axios.patch("http://localhost:3001/currencies/2", {
             value: parseFloat(newValue)
         })
         .then(response => {
@@ -106,7 +106,7 @@ export function Itens(){
 
      // Método para remover o projeto  + fecth
      const removeitem = (id) => {
-        axios.delete(`http://localhost:5500/itens/${id}`)
+        axios.delete(`http://localhost:3001/itens/${id}`)
         .then(() => {
             setItens(itens.filter((item) => item.id !== id))
             setItemMessage("Item removido com sucesso!")

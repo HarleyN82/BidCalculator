@@ -56,7 +56,7 @@ export function ItemForm({btnText, handleSubmit, itemData}){
 
   // Requisição de API para buscar as categorias
   useEffect(() => {
-      axios.get("http://localhost:5500/categories")
+      axios.get("http://localhost:3001/categories")
       .then((response) => {
         const data = response.data
         setCategories(data)
@@ -66,7 +66,7 @@ export function ItemForm({btnText, handleSubmit, itemData}){
 
   // Requisição de API para buscar as moedas
   useEffect(() => {
-    axios.get('http://localhost:5500/currencies')
+    axios.get('http://localhost:3001/currencies')
       .then((response) => {
         const data = response.data
         setCurrencies(data)
@@ -76,7 +76,7 @@ export function ItemForm({btnText, handleSubmit, itemData}){
 
   // Requisição de API para buscar o período
   useEffect(() => {
-    axios.get('http://localhost:5500/time')
+    axios.get('http://localhost:3001/time')
       .then((response) => {
         const data = response.data
         setTimes(data)
