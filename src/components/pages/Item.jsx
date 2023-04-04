@@ -65,8 +65,6 @@ export function Item(){
         .catch((error) => console.log(error));
     }
 
-    const currencySymbol = item.currency === 'BRL' ? 'R$' : '$';
-
     return(
         <>
             {item.name ? (
@@ -86,12 +84,12 @@ export function Item(){
                                     <span>Categoria:</span> {item.category.name}
                                 </p>
                                 <p>
-                                    <span>Orçamento Total:</span> {currencySymbol} {item.budget}
+                                    <span>Orçamento Total:</span> {item.currency.name === 'BRL' ? 'R$' : '$'} {item.budget}
                                 </p>
                             </div>
                         ) : (
                             <div className={styles.item_info}>
-                                <ItemForm handleSubmit={editPost} btnText="Concluir Edição" ItemData={item}/>
+                                <ItemForm handleSubmit={editPost} btnText="Concluir Edição" itemData={item}/>
                             </div>
                         )}
                     </div>

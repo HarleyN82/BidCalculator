@@ -32,6 +32,17 @@ export function Itens(){
         console.log(location)
     }
 
+    // Atualiza a moeda a partir do valor do input
+    useEffect(() => {
+        axios.get("http://localhost:3001/currencies/2")
+        .then(response => {
+            const data = response.data;
+            setDollar(data.value);
+            console.log("Dollar:", data.value)
+            })
+        .catch(e => console.log(e));
+    }, [dollar]);
+
     // Puxa todos os dados atualizados
     useEffect(() => {
         setTimeout(() => {
@@ -54,19 +65,8 @@ export function Itens(){
                 setRemoveLoading(true) // quando os projetos forem carregados, então o elemento de carregamento se remove
             })
             .catch((e) => console.log(e)) 
-        }, 400)
-    },[dollar])
-
-    // Atualiza a moeda a partir do valor do input
-    useEffect(() => {
-        axios.get("http://localhost:3001/currencies/2")
-        .then(response => {
-            const data = response.data;
-            setDollar(data.value);
-            console.log("Dollar:", dollar)
-          })
-        .catch(e => console.log(e));
-    }, [dollar]);
+        }, 310)
+    },[itens, dollar])
 
     useEffect(() => {
         if (itens.length > 0) {
