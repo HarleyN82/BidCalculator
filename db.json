@@ -351,50 +351,6 @@
       },
       "quantityTime": "1",
       "id": 16
-    },
-    {
-      "name": "Deep Learning",
-      "budget": 139.85999999999999,
-      "currency": {
-        "id": "2",
-        "name": "USD"
-      },
-      "price": "3",
-      "dolar": 5.18,
-      "converted_price": "15.54",
-      "category": {
-        "id": "6",
-        "name": "Host"
-      },
-      "quantityCategory": "3",
-      "time": {
-        "id": "3",
-        "name": "Pessoa"
-      },
-      "quantityTime": "3",
-      "id": 17
-    },
-    {
-      "name": "Postman",
-      "budget": 1776.74,
-      "currency": {
-        "id": "2",
-        "name": "USD"
-      },
-      "price": "7",
-      "dolar": 5.18,
-      "converted_price": "36.26",
-      "category": {
-        "id": "3",
-        "name": "Domínios"
-      },
-      "quantityCategory": "7",
-      "time": {
-        "id": "2",
-        "name": "Mês"
-      },
-      "quantityTime": "7",
-      "id": 18
     }
   ],
   "categories": [

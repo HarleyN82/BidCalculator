@@ -66,7 +66,7 @@ export function Itens(){
             })
             .catch((e) => console.log(e)) 
         }, 310)
-    },[itens, dollar])
+    },[dollar])
 
     useEffect(() => {
         if (itens.length > 0) {
@@ -80,7 +80,7 @@ export function Itens(){
                 .catch(error => console.log(error));
             });
         }
-    }, [itens, dollar]);
+    }, [dollar]);
 
     // Pegar o valor do dóllar pelo input e alterar na seção de dolar do banco de dados
     const handleDollarChange = (e) => {
