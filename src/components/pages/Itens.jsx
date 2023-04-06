@@ -43,44 +43,58 @@ export function Itens(){
         .catch(e => console.log(e));
     }, [dollar]);
 
-    // Puxa todos os dados atualizados
+    // Método PATCH
+    // Puxar todos os dados e alterar o preço somente os que dependem do dollar.
     useEffect(() => {
-        setTimeout(() => {
-            axios.get("http://localhost:3001/itens")
-            .then((response) => {
+        async function fetchData(){
+            try {
+                const response = await axios.get("http://localhost:3001/itens");
                 const data = response.data;
-                console.log(data)
+                console.log(data);
                 setItens(
                     data.map((item) => {
-                        let newPrice = item.price;
-                        if (item.currency.name === "USD") {
-                            newPrice = (item.price * dollar).toFixed(2);
-                        }
-                        return {
-                            ...item,
-                            converted_price: newPrice
-                        }
+                    let newPrice = item.price;
+                    if (item.currency.name === "USD") {
+                        newPrice = (item.price * dollar).toFixed(2);
+                    }
+                    return {
+                        ...item,
+                        converted_price: newPrice,
+                    };
                     })
                 );
-                setRemoveLoading(true) // quando os projetos forem carregados, então o elemento de carregamento se remove
-            })
-            .catch((e) => console.log(e)) 
-        }, 310)
+                setRemoveLoading(true);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fetchData();
     },[dollar])
 
+    // Método PATCH
+    // Alterar o orçamento 
     useEffect(() => {
-        if (itens.length > 0) {
-            itens.forEach(item => {
-                axios.patch(`http://localhost:3001/itens/${item.id}`, {
-                    converted_price: item.converted_price,
-                    dolar: dollar,
-                    budget: item.converted_price * item.quantityCategory * item.quantityTime
-                })
-                .then(response => console.log(response.data))
-                .catch(error => console.log(error));
-            });
+        async function fetchPatchData(){
+            if (itens.length > 0) {
+                try {
+                    for (const item of itens) {
+                    const response = await axios.patch(
+                        `http://localhost:3001/itens/${item.id}`,
+                        {
+                            converted_price: item.converted_price,
+                            dolar: dollar,
+                            budget: item.converted_price * item.quantityCategory * item.quantityTime,
+                        }
+                    );
+                    console.log(response.data);
+                    }
+                } catch (error) {
+                    console.log(error);
+                }
+            }
         }
-    }, [dollar]);
+        fetchPatchData();
+    },[dollar])
 
     // Pegar o valor do dóllar pelo input e alterar na seção de dolar do banco de dados
     const handleDollarChange = (e) => {

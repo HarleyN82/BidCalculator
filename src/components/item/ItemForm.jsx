@@ -37,6 +37,9 @@ export function ItemForm({btnText, handleSubmit, itemData}){
   // Estado que representa o tipo da mensagem
   const [typeMessage, setTypeMessage] = useState()
 
+  // Estado que verifica a existência de um item
+  const [existingItens, setExistingItens] = useState([]);
+
   // Estado de todos os projetos
   // const [item, setitem] = useState(itemData || {})
   const [item, setItem] = useState(itemData || {
@@ -97,12 +100,30 @@ export function ItemForm({btnText, handleSubmit, itemData}){
      budgetTotal();
   }, [item.quantityCategory, item.quantityTime, convertedPrice]);
 
+  // Percorre todos os meus itens e armazena no array que será usada para verificar uma possível duplicação de nomes
+  useEffect(() => {
+    axios.get("http://localhost:3001/itens")
+      .then((response) => {
+        const data = response.data;
+        setExistingItens(data);
+      })
+      .catch((e) => console.log(e))
+  }, []);
+
   // Método para enviar formulário
   const submit = (e) => {
     e.preventDefault();
 
     if (!item.name || !item.price || !item.quantityCategory || !item.quantityTime || !item.time || !item.currency || !item.category) {
       setMessage("Por favor, preencha todos os campos.");
+      setTypeMessage("error");
+      return;
+    }
+
+    const projectNames = existingItens.map(myItem => myItem.name);
+
+    if (projectNames.includes(item.name)) {
+      setMessage("Já existe um projeto com esse nome. Por favor, escolha um nome diferente.");
       setTypeMessage("error");
       return;
     }

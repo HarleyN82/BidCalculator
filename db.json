@@ -74,7 +74,7 @@
         "name": "BRL"
       },
       "price": "800",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "800",
       "category": {
         "id": "3",
@@ -272,7 +272,7 @@
         "name": "BRL"
       },
       "price": "250",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "250",
       "category": {
         "id": "6",
@@ -294,7 +294,7 @@
         "name": "BRL"
       },
       "price": "7.50",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "7.50",
       "category": {
         "id": "2",
@@ -316,7 +316,7 @@
         "name": "BRL"
       },
       "price": "800",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "800",
       "category": {
         "id": "1",
@@ -338,7 +338,7 @@
         "name": "BRL"
       },
       "price": "650",
-      "dolar": 5.1,
+      "dolar": 5.18,
       "converted_price": "650",
       "category": {
         "id": "1",
